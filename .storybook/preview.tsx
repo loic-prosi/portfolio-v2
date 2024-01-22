@@ -1,5 +1,9 @@
+import React from "react";
 import type { Preview } from "@storybook/react";
+
 import { withThemeByClassName } from "@storybook/addon-themes";
+
+import { work_sans } from "../src/app/fonts";
 import "../src/app/globals.css";
 
 const preview: Preview = {
@@ -24,7 +28,14 @@ const preview: Preview = {
         }
       ]
     }
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div className={`${work_sans.className} antialiased`}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const decorators = [
