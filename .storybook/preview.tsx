@@ -28,14 +28,7 @@ const preview: Preview = {
         }
       ]
     }
-  },
-  decorators: [
-    (Story) => (
-      <div className={`${work_sans.className} antialiased`}>
-        <Story />
-      </div>
-    )
-  ]
+  }
 };
 
 export const decorators = [
@@ -45,7 +38,12 @@ export const decorators = [
       dark: "dark"
     },
     defaultTheme: "light"
-  })
+  }),
+  (Story) => (
+    <div className={`${work_sans.className} antialiased`}>
+      <Story />
+    </div>
+  )
 ];
 
 export default preview;
