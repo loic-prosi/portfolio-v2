@@ -40,7 +40,7 @@ export const decorators = [
     defaultTheme: "light"
   }),
   (Story) => (
-    <div className={`${work_sans.className} antialiased`}>
+    <div className={`${work_sans.className} antialiased dark:invert`}>
       <Story />
     </div>
   )
